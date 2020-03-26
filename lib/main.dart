@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './screens/gallery_screen.dart';
-import './screens/image_detail_screen.dart';
+import './screens/image_detail.dart';
+import './screens/gallery.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,11 +10,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
+        textTheme: ThemeData.light().textTheme.copyWith(
+              title: TextStyle(fontFamily: 'Lato', fontSize: 24),
+            ),
       ),
       routes: {
-        '/':(ctx) => GalleryScreen(),
-        ImageDetailScreen.routeName:(ctx) => ImageDetailScreen(),
+        '/': (ctx) => GalleryScreen(),
+        ImageDetailScreen.routeName: (ctx) => ImageDetailScreen(),
       },
     );
   }

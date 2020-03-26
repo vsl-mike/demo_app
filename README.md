@@ -1,4 +1,4 @@
-# demo_app
+# demo_proj_sec
 
 A new Flutter project.
 
